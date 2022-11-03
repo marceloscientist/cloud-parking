@@ -1,5 +1,6 @@
-package com.quebec.cloudparking.controller;
+package com.quebec.cloudparking.controller.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.time.LocalDateTime;
@@ -13,8 +14,10 @@ class ParkingDTO {
     private String model;
     private String color;
 
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private
     LocalDateTime entryDate;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDateTime exitDate;
     private Double bill;
 
